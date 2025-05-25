@@ -1,14 +1,21 @@
 
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/home/Home'
+import Products from './pages/products/Products'
+import Users from './pages/users/users'
+import Navbar from './components/Navbar/Navbar'
+
 
 function App() {
-
-
-  console.log("Server cannot handle this much request at once, please try again later( Error count:-1000)");
   return (
     <>
-      <h1>Hello dude</h1>
-      
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<  Products />} />
+        <Route path='/users' element={<Users />} />
+      </Routes>
     </>
   )
 }
